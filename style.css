@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #17181a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.kalkulator {
+    background: #17181a;
+    width: 360px;
+    padding: 20px 25px 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 30px;
+}
+
+.layar {
+    padding: 20px 5px;
+    text-align: right;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.layar-teks {
+    font-size: 4rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    color: #e8eaed;
+    line-height: 1;
+}
+
+.papan-tombol {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.tombol {
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    font-family: inherit;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1; 
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #303134;
+    color: #e8eaed;
+}
+
+.tombol:hover {
+    background: #3c4043;
+}
+
+.tombol:active {
+    background: #5f6368;
+}
+
+.tombol-operator {
+    background: #303134;
+    color: #8ab4f8; 
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.tombol-samadengan {
+    background: #8ab4f8;
+    color: #17181a;
+    font-size: 2.2rem;
+}
+
+.tombol-samadengan:hover {
+    background: #9fc1f9;
+}
+
+.tombol-samadengan:active {
+    background: #aecbf9;
+}
+
+.tombol-hapus {
+    background: #303134;
+    color: #f28b82; 
+    font-weight: 500;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal.tampil {
+    display: flex;
+    opacity: 1;
+}
+
+.konten-modal {
+    background: #202124;
+    border-radius: 28px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0 24px 38px rgba(0, 0, 0, 0.4);
+    position: relative;
+    max-width: 320px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.modal.tampil .konten-modal {
+    transform: scale(1);
+}
+
+.tombol-tutup {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    color: #9aa0a6;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.tombol-tutup:hover {
+    color: #e8eaed;
+}
+
+.konten-modal h2 {
+    color: #e8eaed;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.konten-modal p {
+    color: #9aa0a6;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.konten-modal strong {
+    color: #8ab4f8;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.metode-pembayaran {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.judul-pembayaran {
+    color: #9aa0a6;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.lencana-pembayaran {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lencana {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.lencana.qris { background: #ed2c25; }
+.lencana.gopay { background: #00a5cf; }
+.lencana.shopeepay { background: #ee4d2d; }
+.lencana.dana { background: #108ee9; }
+
+.tombol-langganan {
+    background: #8ab4f8;
+    color: #17181a;
+    border: none;
+    padding: 12px 24px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+
+.tombol-langganan:hover {
+    background: #9fc1f9;
+}
+
+.tombol-langganan:active {
+    background: #aecbf9;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kalkulator">
+        <div class="layar">
+            <div class="layar-teks"><span id="tampilan">0</span></div>
+        </div>
+        <div class="papan-tombol">
+            <button class="tombol tombol-angka" id="tujuh">7</button>
+            <button class="tombol tombol-angka" id="delapan">8</button>
+            <button class="tombol tombol-angka" id="sembilan">9</button>
+            <button class="tombol tombol-operator" id="bagi">÷</button>
+
+            <button class="tombol tombol-angka" id="empat">4</button>
+            <button class="tombol tombol-angka" id="lima">5</button>
+            <button class="tombol tombol-angka" id="enam">6</button>
+            <button class="tombol tombol-operator" id="kali">×</button>
+
+            <button class="tombol tombol-angka" id="satu">1</button>
+            <button class="tombol tombol-angka" id="dua">2</button>
+            <button class="tombol tombol-angka" id="tiga">3</button>
+            <button class="tombol tombol-operator" id="kurang">−</button>
+
+            <button class="tombol tombol-hapus" id="hapus">C</button>
+            <button class="tombol tombol-angka" id="nol">0</button>
+            <button class="tombol tombol-samadengan" id="samadengan">=</button>
+            <button class="tombol tombol-operator" id="tambah">+</button>
+        </div>
+    </div>
+
+    <div id="modalLangganan" class="modal">
+        <div class="konten-modal">
+            <span class="tombol-tutup" id="tutupModal">&times;</span>
+            <h2>Akses Terbatas</h2>
+            <p>Jadilah pelanggan untuk melanjutkan proses!<br><strong>Hanya Rp 890.000,00 </strong>(sebelum pajak WNI)</p>
+            
+            <div class="metode-pembayaran">
+                <span class="judul-pembayaran">Mendukung pembayaran melalui:</span>
+                <div class="lencana-pembayaran">
+                    <span class="lencana qris">QRIS</span>
+                    <span class="lencana gopay">GoPay</span>
+                    <span class="lencana shopeepay">ShopeePay</span>
+                    <span class="lencana dana">DANA</span>
+                </div>
+            </div>
+
+            <button class="tombol-langganan">Berlangganan Sekarang</button>
+        </div>
+    </div>
+
+    <script src="kalculator.js"></script>
+</body>
+</html>
